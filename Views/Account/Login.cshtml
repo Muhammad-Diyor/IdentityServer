@@ -1,0 +1,16 @@
+@model IdentityServer.Models.LoginViewModel
+
+<h1 style="text-align: center;">Login page</h1>
+
+<form method="post">
+  <input hidden="true" asp-for="@Model.ReturnUrl">
+  <div class="mb-3">
+    <label asp-for="@Model.Username" class="form-label">Username</label>
+    <input type="text" asp-for="@Model.Username" class="form-control" placeholder="username">
+  </div>
+  <div class="mb-3">
+    <label asp-for="@Model.Password" class="form-label">Password</label>
+    <input type="password" asp-for="@Model.Password" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
